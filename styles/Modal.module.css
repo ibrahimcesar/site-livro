@@ -1,0 +1,148 @@
+.modal {
+  position: absolute;
+  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  z-index: 1001;
+}
+
+.overlay {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.8)
+}
+.area {
+  background-color: #fff;
+  text-align: right;
+  padding-top: 10px;
+}
+
+.area button {
+  background: none;
+  border: none;
+  margin-right: 10px;;
+}
+
+.area button:hover {
+  cursor: pointer;
+}
+
+.content {
+  text-align: left;
+  background-color: #fff;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-top: 65px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 75px;
+}
+
+.message {
+   max-width: 70%;
+}
+
+.message span {
+  color: var(--color)
+}
+
+.message h1 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 600;
+      font-size: 3.125rem;
+}
+
+.message p {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+.profile {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: stretch;
+   flex-direction: column;
+   align-content: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  z-index: 1002;
+  border: 15px solid var(--color) !important;
+}
+
+.photo {
+  position: relative;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.social a {
+  min-height: 40px;
+  display: block;
+  background-color: var(--color);
+  color: #fff;
+  text-align: center;
+  max-width: 216px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.social a:hover,
+.me a:hover {
+    cursor: pointer;
+    background-color: var(--orange);
+    transition: background-color 0.3s ease;
+}
+
+.me a {
+   background-color: #000;
+   color: #fff;
+   min-height: 40px;
+   border-radius: 20px;
+    text-align: center;
+    max-width: 216px;
+    font-family: 'IBM Plex Mono',monospace;
+    font-weight: 500;
+    font-size: 1.125rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+     margin: 10px auto 60px auto;
+}
+
+@media (max-width: 1080px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
+  }
+
+  .modal {
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+
+  .message {
+    max-width: 85%;
+        max-width: 85%;
+        margin: 0 auto;
+        margin-bottom: 60px;
+  }
+
+}
+

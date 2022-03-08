@@ -1,0 +1,163 @@
+.book {
+  flex: 0 0 auto;
+  width: 50%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-top: var(--bs-gutter-y);
+}
+
+.content {
+  height: 100vh;
+  padding: 0px 3%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 0 0 auto;
+}
+
+.content span {
+  color: var(--color)
+}
+
+.logo {
+  align-self: flex-start;
+  margin-top: 40px;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  align-self: center;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.title {
+  line-height: 3.75rem;
+}
+
+.title h1 {
+  font-size: 3.125rem;
+  margin-bottom: 0;
+  font-family: 'IBM Plex Mono',monospace;
+  font-weight: 600;
+  display: inline;
+}
+
+.title h1:after {
+  content: "|";
+  -webkit-animation: blinker 1s linear infinite;
+  animation: blinker 1s linear infinite;
+  color: var(--color);
+}
+
+
+.title p {
+  display: inline;
+  font-size: 3.125rem;
+  padding-right: 5px;
+  font-family: 'IBM Plex Mono',monospace;
+  font-weight: 600;
+}
+
+.copy {
+  width: 75%;
+}
+
+.copy p {
+  font-weight: var(--regular);
+  font-size: 1.125rem;
+  line-height: 1.8125em;
+}
+
+.content footer {
+  align-self: flex-end;
+}
+
+.content footer p {
+  margin-bottom: 2rem;
+}
+
+.card button {
+  -webkit-appearance: none;
+  background-color: var(--color);
+  color: #fff;
+  display: block;
+  width: 75%;
+  min-height: 40px;
+  border: none;
+  font-family: 'IBM Plex Mono',monospace;
+  font-weight: 300;
+  font-size: 1.125rem;
+}
+
+.card input {
+  width: 75%;
+  min-height: 40px;
+  display: block;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #E9F0FB;
+  padding: 10px;
+  font-family: var(--mono);
+  font-size: 0.875rem;
+  caret-color: var(--color);
+  font-weight: var(--medium);
+}
+
+.card input:focus {
+  border: 3px solid var(--orange);
+}
+
+.card button:hover {
+  cursor: pointer;
+  background-color: var(--orange);
+  transition: background-color 0.3s ease;
+}
+
+.card button:focus {
+  border: 3px solid var(--orange);
+}
+
+.partner {
+  width: 100%
+}
+
+@media (max-width: 1080px) {
+  .book {
+    content: 1;
+  }
+
+  .title,
+  .title h1,
+  .title p {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .card form {
+    margin-top: 20px;
+  }
+
+  .card input,
+  .card button,
+  .copy {
+    width: 100%
+  }
+
+  .partner {
+    margin-top: 90px;
+    margin-bottom: 50px;
+  }
+}

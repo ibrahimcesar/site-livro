@@ -1,0 +1,143 @@
+.book {
+  flex: 0 0 auto;
+  max-width: 100%;
+  padding-right: var(--bs-gutter-x);
+  padding-left: var(--bs-gutter-x);
+  margin-top: var(--bs-gutter-y);
+}
+
+.content {
+  padding: 0px 3%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 0 0 auto;
+}
+
+.content span {
+  color: var(--color)
+}
+
+.logo {
+  align-self: flex-start;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  align-self: center;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: var(--mono);
+  line-height: 2.25rem;
+}
+
+.title h1 {
+  font-size: 3.125rem;
+  margin-bottom: 0;
+  font-weight: var(--semibold);
+  display: inline;
+}
+
+.title h1:after {
+  content: "|";
+  -webkit-animation: blinker 1s linear infinite;
+  animation: blinker 1s linear infinite;
+  color: var(--color);
+}
+
+
+.title p {
+  display: inline;
+  font-size: 3.125rem;
+  padding-right: 5px;
+}
+
+.copy p {
+  font-weight: var(--regular);
+  font-size: 1.125rem;
+  line-height: 1.8125em;
+}
+
+.content footer {
+  align-self: flex-end;
+}
+
+.content footer p {
+  margin-bottom: 2rem;
+}
+
+.card button {
+  -webkit-appearance: none;
+  background-color: var(--color);
+  color: #fff;
+  display: block;
+  width: 75%;
+  min-height: 40px;
+  border: none;
+  font-family: 'IBM Plex Mono',monospace;
+  font-weight: 300;
+  font-size: 1.125rem;
+}
+
+.card input {
+  width: 75%;
+  min-height: 40px;
+  display: block;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #E9F0FB;
+  padding: 10px;
+  font-family: var(--mono);
+  font-size: 0.875rem;
+  caret-color: var(--color);
+  font-weight: var(--medium);
+}
+
+.card input:focus {
+  border: 3px solid var(--orange);
+}
+
+.card button:hover {
+  cursor: pointer;
+  background-color: var(--orange);
+}
+
+.card button:focus {
+  border: 3px solid var(--orange);
+}
+
+.partner {
+  width: 100%
+}
+
+.text {
+  background-image: url(/livro-aws.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 70%;
+  margin-top: 30px;
+}
+
+.body {
+   background-color: #fff;
+   margin: 20px;
+   padding-top: 50px;
+   padding-bottom: 50px;
+   margin-top: 50%;
+}

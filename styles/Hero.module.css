@@ -1,0 +1,19 @@
+
+.main {
+  background-color: var(--color-darker);
+  position: absolute;
+  height: 100%;
+  flex: 0 0 auto;
+  width: 50%;
+  margin-left: 50%;
+  padding: var(--bs-gutter-book);
+}
+
+.image {
+  position: relative;
+  display: block;
+  margin:  0 auto;
+  padding: 50px;
+  max-width: 90%;
+  height: 100%;
+}

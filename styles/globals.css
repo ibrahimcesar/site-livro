@@ -1,9 +1,40 @@
+:root {
+  --color: #3A83F2;
+  --color-darker: #111863;
+  --orange: #FF9900;
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+  --sans: 'IBM Plex Sans', sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
+  --thin: 100;
+  --medium: 300;
+  --regular: 400;
+  --medium: 500;
+  --semibold: 600;
+  --bs-gutter-book: 2rem;
+  --mono-thin: 100, 'IBM Plex Mono', monospace;
+  --mono-medium: 300,'IBM Plex Mono', monospace;
+}
+
+::selection,
+::-moz-selection {
+  color: var(--sans);
+}
+
+::placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: #000;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--sans);
 }
 
 a {
