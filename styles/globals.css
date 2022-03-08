@@ -45,3 +45,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
