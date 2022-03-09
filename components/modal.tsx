@@ -23,7 +23,7 @@ const Modal = ({ setModal }: any) => {
 
         <div className={styles.message}>
 
-          <h1><span>Obrigado</span> por ter se cadastrado<span>.</span></h1>
+          <h1><span>Obrigado</span> por seu cadastro<span>.</span></h1>
           <p>Assim que o livro estiver disponível você receberá um aviso em seu email.</p>
           <p>Além disso, também irei enviar frequentemente atualizações e conteúdo sobre <span>AWS</span> e cloud em geral. Você poderá se desinscrever a qualquer momento!</p>
         </div>

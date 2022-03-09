@@ -21,6 +21,7 @@
   background-color: #fff;
   text-align: right;
   padding-top: 10px;
+  min-width: 80vw;
 }
 
 .area button {
