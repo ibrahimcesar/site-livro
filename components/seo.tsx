@@ -33,7 +33,10 @@ const Seo = () => {
         <meta name="twitter:title" content="Em breve: Livro sobre AWS pela Casa do Código"/>
         <meta name="twitter:description" content="Construa e escale na nuvem. Livro em portugês sobre como construir serviços e utilizar recursos da Amazon Web Services por Ibrahim Cesar através da Casa do Código" />
         <meta name="twitter:creator" content="@ibrahimcesar"/>
-        <meta name="twitter:image:src" content="http://livroaws.ibrahimcesar.cloud/img-twt.png"/>
+        <meta name="twitter:image:src" content="http://livroaws.ibrahimcesar.cloud/img-twt.png" />
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:creator" content="@ibrahimcesar"/>
+        <meta name="twitter:image" content="http://livroaws.ibrahimcesar.cloud/img-twt.png"/>
         <meta property="og:title" content="Em breve: Livro sobre AWS pela Casa do Código" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="http://livroaws.ibrahimcesar.cloud/" />
