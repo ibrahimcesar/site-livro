@@ -18,7 +18,9 @@ const Content = ({setModal}: any) => {
           />
          </article>
 
-        <Cta setModal={setModal} />
+        <Cta
+          setModal={setModal}
+        />
 
       </div>
     </section>

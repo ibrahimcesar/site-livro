@@ -1,12 +1,16 @@
 
 .main {
   background-color: var(--color-darker);
+  padding: var(--bs-gutter-book);
+  width: 100%;
+  display: grid;
+  justify-items: center;
+}
+
+.container {
   position: absolute;
   height: 100%;
-  flex: 0 0 auto;
-  width: 50%;
-  margin-left: 50%;
-  padding: var(--bs-gutter-book);
+  
 }
 
 .image {
@@ -14,6 +18,6 @@
   display: block;
   margin:  0 auto;
   padding: 50px;
-  max-width: 90%;
+  max-width: 100%;
   height: 100%;
 }

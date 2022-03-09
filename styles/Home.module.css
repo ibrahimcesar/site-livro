@@ -1,18 +1,14 @@
 .container {
-  width: 100%;
-  height: 100%;
-  top: 0%;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .main {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-.5 * var(--bs-gutter-x));
   margin-left: calc(-.5 * var(--bs-gutter-x));
   box-sizing: border-box;
-  grid-auto-columns: max-content;
+  min-height: 100vh;
 }
 
 .mobile {

@@ -1,11 +1,12 @@
-import { hasSubscribers } from "diagnostics_channel";
-import Image from "next/image";
+import { useState } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { useForm } from "react-hook-form";
+import Image from "next/image";
 
 import styles from "../styles/Content.module.css";
 
 const Cta = ({ setModal }: any) => {
+  const [error, setError] = useState(false);
   const { executeRecaptcha } = useGoogleReCaptcha();
 
   const { register, handleSubmit, watch, setValue, formState: { errors } } = useForm<{
@@ -28,6 +29,8 @@ const Cta = ({ setModal }: any) => {
       const result = await subscribe.json();
       if (result.created) {
         setModal(true);
+      } else {
+        setError(true)
       }
     }
 })
@@ -60,12 +63,9 @@ const Cta = ({ setModal }: any) => {
               {...register("email", {required: true, pattern: emailRegex })}
             />
             <button type="submit">Fique por dentro</button>
+            {error ? <p className={styles.error}>😓 Houve um erro ao fazer uma inscrição. Me <a href="https://github.com/ibrahimcesar/site-livro/issues/new">avise</a>!</p> : null}
             </form>
-            </div>
-        </article>
-
-        <article className={styles.partner}>
-              <div className={styles.card}>
+            <div className={styles.partner}>
                 <a
                   href="https://www.casadocodigo.com.br/"
                   target="_blank"
@@ -75,10 +75,10 @@ const Cta = ({ setModal }: any) => {
                       title="Casa do Código"
                       alt="Editora Casa do Código"
                       width="216"
-                      height="63"
-                    />
-                  </a>
-              </div>
+                      height="63"/>
+                </a>
+        </div>
+        </div>
         </article>
       </>
   );
