@@ -25,7 +25,7 @@ const Modal = ({ setModal }: any) => {
 
           <h1><span>Obrigado</span> por ter se cadastrado<span>.</span></h1>
           <p>Assim que o livro estiver disponível você receberá um aviso em seu email.</p>
-          <p>Caso queira conferir novidades ou conversar, você também pode acompanhar o autor nas redes.</p>
+          <p>Além disso, também irei enviar frequentemente atualizações e conteúdo sobre <span>AWS</span> e cloud em geral. Você poderá se desinscrever a qualquer momento!</p>
         </div>
 
         <div className={styles.profile}>

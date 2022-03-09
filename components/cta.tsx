@@ -45,7 +45,7 @@ const Cta = ({ setModal }: any) => {
             </div>
 
             <div className={styles.copy}>
-            <p>Construa e escale serviços na maior das nuvens, a <span>AWS</span>. Inscreva-se para receber atualizações do autor e ser notificado do lançamento. Pessoas inscritas também poderão ganhar livros <span>na faixa!</span> </p>
+            <p>Construa e escale serviços na maior das nuvens, a <span>AWS</span>. Inscreva-se para receber atualizações frequentes sobre o livro e cloud e ser notificado do lançamento. Pessoas inscritas também poderão ganhar livros <span>na faixa!</span> </p>
             </div>
 
           <form onSubmit={onSubmit}>
