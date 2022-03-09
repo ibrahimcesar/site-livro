@@ -49,3 +49,7 @@ a {
 .grecaptcha-badge {
   visibility: hidden;
 }
+
+p #__next-route-announcer__ {
+  margin: 0;
+}
