@@ -7,12 +7,12 @@
 }
 
 .main {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-.5 * var(--bs-gutter-x));
   margin-left: calc(-.5 * var(--bs-gutter-x));
   box-sizing: border-box;
+  grid-auto-columns: max-content;
 }
 
 .mobile {

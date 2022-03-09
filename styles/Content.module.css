@@ -8,7 +8,6 @@
 }
 
 .content {
-  height: 100vh;
   padding: 0px 3%;
   display: flex;
   align-items: center;
@@ -41,6 +40,7 @@
   align-self: center;
   max-width: 60%;
   margin: 0 auto;
+  margin-left: 5%;
 }
 
 .title {
@@ -131,7 +131,8 @@
 }
 
 .partner {
-  width: 100%
+  width: 100%;
+  margin-top: 90px;
 }
 
 @media (max-width: 1080px) {
