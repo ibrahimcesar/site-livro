@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Cta } from "@components/cta"
 
 import styles from "../styles/Mobile.module.css";
-import { setDefaultResultOrder } from "dns";
 
 const MobileContent = () => {
   return(

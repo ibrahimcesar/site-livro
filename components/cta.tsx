@@ -6,13 +6,15 @@ import Image from "next/image";
 import styles from "../styles/Content.module.css";
 
 const Cta = ({ setModal }: any) => {
+
   const [error, setError] = useState(false);
   const { executeRecaptcha } = useGoogleReCaptcha();
 
-  const { register, handleSubmit, watch, setValue, formState: { errors } } = useForm<{
+  const { register, handleSubmit } = useForm<{
     email: string;
     name: string;
   }>();
+
   const onSubmit = handleSubmit(async (data) => {
     const { email, name } = data;
 
@@ -33,13 +35,12 @@ const Cta = ({ setModal }: any) => {
         setError(true)
       }
     }
-})
+  })
 
 
   const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   return(
-    <>
       <article className={styles.cta}>
           <div className={styles.card}>
             <div className={styles.title}>
@@ -48,22 +49,27 @@ const Cta = ({ setModal }: any) => {
             </div>
 
             <div className={styles.copy}>
-            <p>Construa e escale serviços na maior das nuvens, a <span>AWS</span>. Inscreva-se para receber atualizações frequentes sobre o livro e cloud e ser notificado do lançamento. Pessoas inscritas também poderão ganhar livros <span>na faixa!</span> </p>
+              <p>Construa e escale serviços na maior das nuvens, a <span>AWS</span>. Inscreva-se para receber atualizações frequentes sobre o livro e cloud e ser notificado do lançamento. Pessoas inscritas também poderão ganhar livros <span>na faixa!</span> </p>
             </div>
 
-          <form onSubmit={onSubmit}>
-             <input
-                type="text"
-              placeholder="Nome"
-              {...register("name", { required: true })}
-            />
+            <form onSubmit={onSubmit}>
+              <input
+                  type="text"
+                placeholder="Nome"
+                {...register("name", { required: true })}
+              />
               <input
                 type="email"
                 placeholder="E-mail"
               {...register("email", {required: true, pattern: emailRegex })}
-            />
-            <button type="submit">Fique por dentro</button>
-            {error ? <p className={styles.error}>😓 Houve um erro ao fazer uma inscrição. Me <a href="https://github.com/ibrahimcesar/site-livro/issues/new">avise</a>!</p> : null}
+              />
+             <button type="submit">Fique por dentro</button>
+              {error ? (
+                <p className={styles.error}>😓 Houve um erro ao fazer uma inscrição. Me <a
+                  href="https://github.com/ibrahimcesar/site-livro/issues/new"
+                  target="_blank"
+                  rel="noreferrer">avise</a>!</p>
+              ) : null}
             </form>
             <div className={styles.partner}>
                 <a
@@ -77,10 +83,9 @@ const Cta = ({ setModal }: any) => {
                       width="216"
                       height="63"/>
                 </a>
-        </div>
-        </div>
-        </article>
-      </>
+            </div>
+          </div>
+     </article>
   );
 }
 

@@ -13,6 +13,7 @@ const Modal = ({ setModal }: any) => {
     <>
       <section className={styles.modal}>
         <div className={styles.area}>
+
           <span>
             <button onClick={closeModal}>
               <img src="/close.svg" alt="Fechar modal" />
