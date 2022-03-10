@@ -65,10 +65,13 @@ const Cta = ({ setModal }: any) => {
               />
              <button type="submit">Fique por dentro</button>
               {error ? (
-                <p className={styles.error}>😓 Houve um erro ao fazer uma inscrição. Me <a
+                <p className={styles.error}>😓 Houve um erro ao fazer uma inscrição. Abra uma <a
                   href="https://github.com/ibrahimcesar/site-livro/issues/new"
                   target="_blank"
-                  rel="noreferrer">avise</a>!</p>
+                  rel="noreferrer">issue</a> para que eu investigue e <a
+                  href="https://www.getrevue.co/profile/ibrahimcesar"
+                  target="_blank"
+                  rel="noreferrer">utilize este link</a>. Obrigado!</p>
               ) : null}
             </form>
             <div className={styles.partner}>
