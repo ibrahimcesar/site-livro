@@ -29,7 +29,7 @@ export default async function handler(
 
   const validation = await validate.json();
 
-  if (validation.score >= 0.8) {
+  if (validation.score >= 0.7) {
     const result = await fetch("https://www.getrevue.co/api/v2/subscribers", {
       method: "POST",
       headers: {
