@@ -52,28 +52,21 @@ const Cta = ({ setModal }: any) => {
               <p>Construa e escale serviços na maior das nuvens, a <span>AWS</span>. Inscreva-se para receber atualizações frequentes sobre o livro e cloud e ser notificado do lançamento. Pessoas inscritas também poderão ganhar livros <span>na faixa!</span> </p>
             </div>
 
-            <form onSubmit={onSubmit}>
-              <input
-                  type="text"
-                placeholder="Nome"
-                {...register("name", { required: true })}
-              />
-              <input
-                type="email"
-                placeholder="E-mail"
-              {...register("email", {required: true, pattern: emailRegex })}
-              />
-             <button type="submit">Fique por dentro</button>
-              {error ? (
-                <p className={styles.error}>😓 Houve um erro ao fazer uma inscrição. Abra uma <a
-                  href="https://github.com/ibrahimcesar/site-livro/issues/new"
-                  target="_blank"
-                  rel="noreferrer">issue</a> para que eu investigue e <a
-                  href="https://www.getrevue.co/profile/ibrahimcesar"
-                  target="_blank"
-                  rel="noreferrer">utilize este link</a>. Obrigado!</p>
-              ) : null}
-            </form>
+        <div id="revue-embed">
+          <form action="https://www.getrevue.co/profile/ibrahimcesar/add_subscriber" method="post" id="revue-form" name="revue-form" target="_blank">
+                <label htmlFor="member_first_name" title="Nome">
+                <input className="revue-form-field" placeholder="Nome" type="text" name="member[first_name]" id="member_first_name" />
+            </label>
+
+              <label htmlFor="member_email" title="E-mail">
+              <input className="revue-form-field" placeholder="E-mail" type="email" name="member[email]" id="member_email"/>
+            </label>
+
+          <button type="submit" name="member[subscribe]" id="member_submit" >Fique por dentro</button>
+
+            <p className={styles.error}>Ao se inscrever, você está de acordo com <a target="_blank" rel="noreferrer" href="https://www.getrevue.co/terms">Termos de serviço</a> e <a target="_blank" rel="noreferrer" href="https://www.getrevue.co/privacy">Política de Privacidade</a>.</p>
+          </form>
+
             <div className={styles.partner}>
                 <a
                   href="https://www.casadocodigo.com.br/"
@@ -87,7 +80,8 @@ const Cta = ({ setModal }: any) => {
                       height="63"/>
                 </a>
             </div>
-          </div>
+        </div>
+      </div>
      </article>
   );
 }
