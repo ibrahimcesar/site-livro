@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         </main>
         <main className={styles.mobile}>
           <MobileContent />
-        </main>
+        </main> 
       </div>
       { success ? <Modal setModal={setSuccess} /> : null}
     </>
